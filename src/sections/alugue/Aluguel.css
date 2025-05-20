@@ -1,122 +1,308 @@
+/* Variáveis de cores */
+:root {
+  --primary-color: #f7c100;
+  --primary-hover: #ffd700;
+  --secondary-color: #1a1a1a;
+  --text-light: #ffffff;
+  --text-dark: #333333;
+  --overlay-dark: rgba(0, 0, 0, 0.8);
+  --transition: all 0.3s ease-in-out;
+  --border-radius: 12px;
+}
+
+/* Estilos base */
 .aluguel {
   position: relative;
-  padding: 0 224px;
   width: 100%;
-  min-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+  padding: 100px 0;
+  background-color: #f8f9fa;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-.aluguelContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1200px;
+.aluguel.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.aluguel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 1;
+}
+
+.aluguel-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
   z-index: 2;
-  padding: 50px 0;
 }
 
-.text {
-  flex: 1;
-  padding-right: 40px;
+.aluguel-content {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 60px;
 }
 
-.text h3 {
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.aluguel-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  color: var(--text-light);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  transition-delay: 0.2s;
 }
 
-.text p {
-  font-size: 26px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
+.aluguel.visible .aluguel-text {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.topicos {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.aluguel-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
 }
 
-.topico1 {
+.aluguel-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.aluguel-description {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.aluguel-cta {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  transition-delay: 0.4s;
+}
+
+.aluguel.visible .aluguel-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Grid de Benefícios */
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.beneficio-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  padding: 40px 30px;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.aluguel.visible .beneficio-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficio-card:hover {
+  transform: translateY(-10px) !important;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.beneficio-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: rgba(247, 193, 0, 0.1);
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  background-color: #f7c100;
-  padding: 20px; /* Increased from 15px to 20px for more height */
-  border-radius: 36px 0px; /* Changed from 8px to 48px 0px as requested */
-  backdrop-filter: blur(5px);
-  transition: transform 0.3s ease;
+  justify-content: center;
+  transition: var(--transition);
 }
 
-.topico1:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.2);
+.beneficio-card:hover .beneficio-icon-wrapper {
+  background: var(--primary-color);
+  transform: rotateY(180deg);
 }
 
-.topico1 svg {
-  font-size: 24px;
-  margin-right: 15px;
-  color: #f8f8f8;
+.beneficio-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  transition: var(--transition);
 }
 
-.topico1 p {
+.beneficio-card:hover .beneficio-icon {
+  color: var(--secondary-color);
+  transform: rotateY(-180deg);
+}
+
+.beneficio-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+.beneficio-description {
   font-size: 1rem;
-  font-weight: 500;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
-.aluguel-img {
+/* Efeito de partículas */
+.particles-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 1;
+  pointer-events: none;
 }
 
-.aluguel-img::after {
-  content: "";
+.particle {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
+  background: rgba(247, 193, 0, 0.2);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float 8s infinite ease-in-out;
 }
 
-.aluguel-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 0;
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .aluguel-content {
+    gap: 50px;
+  }
+  
+  .beneficios-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .aluguel {
+    padding: 80px 0;
+  }
+  
+  .aluguel-title {
+    font-size: 2.5rem;
+  }
+  
+  .aluguel-description {
+    font-size: 1.1rem;
+  }
+  
+  .beneficio-card {
+    padding: 30px 20px;
+  }
+  
+  .beneficio-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aluguel {
+    padding: 60px 0;
+  }
+  
+  .aluguel-title {
+    font-size: 2.2rem;
+  }
+  
+  .beneficios-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .aluguel {
+    padding: 50px 0;
+  }
+  
+  .aluguel-title {
+    font-size: 1.8rem;
+  }
+  
+  .aluguel-description {
+    font-size: 1rem;
+  }
+  
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .beneficio-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .beneficio-icon {
+    font-size: 2rem;
+  }
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .aluguelContainer {
+  .aluguel-content {
     flex-direction: column;
     text-align: center;
   }
 
-  .text {
+  .aluguel-text {
     padding-right: 0;
     margin-bottom: 40px;
   }
-
-  .topicos {
-    width: 100%;
+  
+  .beneficios-grid {
+    grid-template-columns: 1fr;
   }
 }

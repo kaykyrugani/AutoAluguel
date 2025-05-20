@@ -20,7 +20,7 @@
   align-items: flex-start;
   justify-content: center;
   height: 100%;
-  padding: 0 224px;
+  padding: 24px 224px;
   text-align: left;
   color: white;
   z-index: 1;
@@ -40,6 +40,12 @@
     0.5
   ); /* Overlay escuro para melhorar a legibilidade do texto */
   z-index: -1;
+}
+
+.heroContainer img {
+  width: 300px;
+  height: 300px;
+  transform: translateY(-270px);
 }
 
 .heroContainer h1 {
