@@ -1,0 +1,46 @@
+.card {
+  background-color: #f7c100;
+  padding: 1rem;
+  border-radius: 32px 0px;
+  width: 470px;
+  height: 501px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #1a1a1a;
+}
+
+.card-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.card h4 {
+  font-size: 28px;
+  margin: 0.5rem 0;
+}
+.card p {
+  font-size: 22px;
+  margin: 0.5rem 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.card li {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.card .cta{
+    width: 320px;
+    transform: translate(220px, 30px);
+}

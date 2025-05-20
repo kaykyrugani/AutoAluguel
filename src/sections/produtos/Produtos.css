@@ -1,0 +1,25 @@
+.product-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.product-section-header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.product-section-header p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* força 2 colunas */
+  gap: 88px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}

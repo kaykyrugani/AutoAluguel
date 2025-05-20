@@ -1,0 +1,81 @@
+.contato {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+/* Corrigindo o seletor .Cont img para .contImg */
+.contImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Estilo para a imagem do homem */
+.homemCont {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 95%; /* Ajuste conforme necessário */
+  z-index: 2;
+  object-fit: contain;
+}
+
+.contContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+  padding: 0 224px;
+  text-align: left;
+  color: white;
+  z-index: 1;
+}
+
+.contContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Overlay escuro para melhorar a legibilidade do texto */
+  z-index: -1;
+}
+
+.contContainer h2 {
+  font-size: 68px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px; /* 30.508% */
+  letter-spacing: 11.8px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contContainer h3 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.contContainer p {
+  font-size: 24px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
