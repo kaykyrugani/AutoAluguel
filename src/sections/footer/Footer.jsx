@@ -1,38 +1,44 @@
 import React from 'react';
 import './Footer.css';
 import Logo from '../../assets/Imgs/Logo.png';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaInstagram, FaWhatsapp, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 
 const contactInfo = [
   {
     icon: <FaMapMarkerAlt className="info-icon" />,
     title: 'Endereço',
-    description: 'Rua Rita Rocha Vieira, 760, São José, Franca/SP'
+    description: 'Rua Dr Julio Dante Risso, 557, jardim anhanguera CEP: 14.092-190 Ribeirão Preto/SP'
   },
   {
     icon: <FaPhone className="info-icon" />,
     title: 'Telefone',
-    description: '(11) 99999-9999',
-    link: 'tel:11999999999'
+    description: '(16) 99247-9494 ou 99263-1992',
+    link: ' https://wa.me/5516992631992?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.'
   },
   {
     icon: <FaEnvelope className="info-icon" />,
     title: 'E-mail',
-    description: 'contato@autoaluguel.com.br',
-    link: 'mailto:contato@autoaluguel.com.br'
+    description: 'toplocacoes17@gmail.com',
+    link: 'mailto:toplocacoes17@gmail.com'
   },
   {
     icon: <FaClock className="info-icon" />,
     title: 'Horário de Funcionamento',
-    description: 'Segunda a Sexta: 09:00 às 18:00'
+    description: 'Segunda a Sexta: 09:00 às 17:00'
   }
 ];
 
 const socialLinks = [
-  { icon: <FaFacebookF />, url: '#', label: 'Facebook' },
-  { icon: <FaInstagram />, url: '#', label: 'Instagram' },
-  { icon: <FaLinkedinIn />, url: '#', label: 'LinkedIn' },
-  { icon: <FaWhatsapp />, url: '#', label: 'WhatsApp' },
+  { 
+    icon: <FaInstagram />, 
+    url: 'https://www.instagram.com/top_locacoes?igsh=MThoanB3YWI3dm50dA%3D%3D', 
+    label: 'Instagram' 
+  },
+  { 
+    icon: <FaWhatsapp />, 
+    url: 'https://wa.me/5516992631992?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20seus%20servi%C3%A7os.', 
+    label: 'WhatsApp' 
+  }
 ];
 
 function Footer() {

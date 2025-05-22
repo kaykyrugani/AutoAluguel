@@ -1,48 +1,26 @@
 // src/data/products.js
+import BaEle from '../Imgs/BaEle.png';
+import Ba1 from '../Imgs/Ba1.png';
 
 export const products = [
   {
     id: 1,
-    name: "Betoneira 400LT",
-    description: "Alta produtividade com baixo consumo",
+    name: "BALANCIM ELÉTRICO",
+    description: "COMPOSTO POR CABOS DE AÇOS GALVANIZADOS, 5/16 E 6/19. ",
     topics: [
-      "Alta produtividade com baixo consumo",
-      "Fácil transporte e operação",
-      "Ideal para obras de médio porte"
+      "Todas as revisões são feitas antes de sair para entrega e depois que voltam da obra",
+      "Este equipamento pode chegar a medir de 1m a 8m e o preço da locação é mesmo.",
     ],
-    image: "/images/betoneira.jpg"
+    image: BaEle
   },
   {
     id: 2,
-    name: "Andaime Tubular",
-    description: "Segurança e praticidade em altura",
+    name: "BALANCIM MANUAL",
+    description: "COMPOSTO POR CABOS DE AÇOS GALVANIZADOS, 5/16 E 6/19.",
     topics: [
-      "Montagem simples e rápida",
-      "Estrutura reforçada",
-      "Altura ajustável"
+      "Todas as revisões são feitas antes de sair para entrega e depois que voltam da obra.",
+      "Este equipamento pode chegar a medir de 1m a 6m e o preço da locação é mesmo.",
     ],
-    image: "/images/andaime.jpg"
+    image: Ba1
   },
-  {
-    id: 3,
-    name: "Compactador de Solo",
-    description: "Performance superior em compactação",
-    topics: [
-      "Baixo consumo de combustível",
-      "Alta eficiência",
-      "Uso ergonômico"
-    ],
-    image: "/images/compactador.jpg"
-  },
-  {
-    id: 4,
-    name: "Plataforma Elevatória",
-    description: "Mobilidade vertical segura",
-    topics: [
-      "Capacidade para 200kg",
-      "Movimentação elétrica",
-      "Fácil operação"
-    ],
-    image: "/images/plataforma.jpg"
-  }
 ];

@@ -10,12 +10,12 @@ function Hero() {
       <img src={HeroImg} alt="ImgHero" />
       <div className="heroContainer">
         <img src={Logo} alt="Logo" />
-        <h1>Titulo da pagína</h1>
-        <h3>Sub-titulo</h3>
+        <h1>Aluguel Rápido e Confiável</h1>
+        <h3>Equipamentos prontos para sua obra, com suporte e entrega ágil.</h3>
         <Cta
           text="Fale com um especialista"
           size="large"
-          link="https://api.whatsapp.com/send?phone=5511999999999"
+          link="https://wa.me/5516992631992?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista"
         />
       </div>
     </section>

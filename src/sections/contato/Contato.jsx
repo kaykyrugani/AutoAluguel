@@ -50,7 +50,8 @@ function Contato() {
               <Cta
                 text="Fale com um especialista"
                 size="large"
-                link="https://api.whatsapp.com/send?phone=5511999999999"
+                link="https://wa.me/5516992631992?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista"
+
               />
             </div>
           </div>

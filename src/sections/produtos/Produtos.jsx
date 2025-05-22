@@ -18,12 +18,8 @@ function ProductSection() {
     return () => clearTimeout(timer);
   }, []);
 
-  const toggleShowAll = () => {
-    setShowAll(!showAll);
-    setVisibleProducts(showAll ? 4 : products.length);
-  };
-
-  const displayedProducts = showAll ? products : products.slice(0, visibleProducts);
+  // Mostra todos os produtos
+  const displayedProducts = products;
 
   return (
     <section className={`product-section ${isVisible ? 'visible' : ''}`} id="produtos">
@@ -34,72 +30,20 @@ function ProductSection() {
           <p>Nossas soluções em equipamentos para construção civil oferecem qualidade e desempenho para atender às suas necessidades.</p>
         </div>
 
-        <div className="product-grid">
-          {displayedProducts.map((product, index) => (
-            <div 
-              key={product.id} 
-              className="product-item"
-              style={{
-                animationDelay: `${index * 0.1}s`,
-                opacity: 0,
-                animation: isVisible ? `fadeInUp 0.5s ease-out forwards ${index * 0.1}s` : 'none'
-              }}
-            >
+        <div className="products-grid">
+          {displayedProducts.map((product) => (
+            <div key={product.id} className="product-item">
               <ProductCard {...product} />
             </div>
           ))}
         </div>
 
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          width: '100%',
-          marginTop: '40px',
-          paddingTop: '20px',
-          borderTop: '1px solid rgba(0,0,0,0.1)',
-          position: 'relative',
-          zIndex: 1000
-        }}>
-          <button 
-            onClick={toggleShowAll}
-            style={{
-              background: 'linear-gradient(135deg, #f7c100 0%, #f8a21a 100%)',
-              color: '#1a1a1a',
-              border: 'none',
-              borderRadius: '50px',
-              padding: '14px 32px',
-              fontSize: '16px',
-              fontWeight: 700,
-              cursor: 'pointer',
-              fontFamily: 'Montserrat, sans-serif',
-              textTransform: 'uppercase',
-              letterSpacing: '0.5px',
-              boxShadow: '0 4px 15px rgba(247, 193, 0, 0.3)',
-              minWidth: '220px',
-              textAlign: 'center',
-              position: 'relative',
-              overflow: 'hidden',
-              zIndex: 1001
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 7px 20px rgba(247, 193, 0, 0.4)';
-            }}
-            onMouseOut={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 4px 15px rgba(247, 193, 0, 0.3)';
-            }}
-            onMouseDown={(e) => {
-              e.currentTarget.style.transform = 'translateY(1px)';
-              e.currentTarget.style.boxShadow = '0 2px 10px rgba(247, 193, 0, 0.4)';
-            }}
-            onMouseUp={(e) => {
-              e.currentTarget.style.transform = 'translateY(-3px)';
-              e.currentTarget.style.boxShadow = '0 7px 20px rgba(247, 193, 0, 0.4)';
-            }}
-          >
-            {showAll ? 'Ver Menos Produtos' : 'Ver Mais Produtos'}
-          </button>
+        <div className="product-actions">
+          <Cta 
+            text="Falar com um especialista"
+            size="medium"
+            link="https://wa.me/5516992631992?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos"
+          />
         </div>
       </div>
     </section>

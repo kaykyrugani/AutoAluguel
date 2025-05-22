@@ -5,8 +5,10 @@ import {
   FaTools, 
   FaHeadset, 
   FaShieldAlt,
-  FaTruck,
-  FaClock
+  FaClock,
+  FaMapMarkedAlt,
+  FaMoneyBillWave,
+  FaCalendarAlt
 } from "react-icons/fa";
 import Particles from "../../components/Particles";
 
@@ -57,9 +59,19 @@ function Aluguel() {
       description: "Equipamentos com manutenção preventiva regular"
     },
     {
-      icon: <FaTruck className="beneficio-icon" />,
-      title: "Entrega ágil",
-      description: "Entregamos no local e horário agendados"
+      icon: <FaCalendarAlt className="beneficio-icon" />,
+      title: "8 Anos no mercado",
+      description: "Experiência e confiabilidade em aluguel de equipamentos"
+    },
+    {
+      icon: <FaMapMarkedAlt className="beneficio-icon" />,
+      title: "Atendimento em várias cidades",
+      description: "Ribeirão Preto, São Carlos, Araraquara, Araras, Limeira, MG (até Uberlândia, Araçatuba)"
+    },
+    {
+      icon: <FaMoneyBillWave className="beneficio-icon" />,
+      title: "Orçamento personalizado",
+      description: "Soluções sob medida para atender suas necessidades específicas"
     },
     {
       icon: <FaClock className="beneficio-icon" />,

@@ -22,7 +22,7 @@ const Cta = ({
 
   return (
     <a
-      href={link || '#'}
+      href={link || 'https://wa.me/5516992631992?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20um%20especialista'}
       target="_blank"
       rel="noopener noreferrer"
       className={`cta ${size} ${loading ? 'loading' : ''} ${disabled ? 'disabled' : ''}`}
