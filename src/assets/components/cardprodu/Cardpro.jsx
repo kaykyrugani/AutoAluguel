@@ -1,5 +1,7 @@
 import Cta from '../cta/Cta';
 import './Cardpro.css';
+import BaEle from '../../Imgs/BaEle.png';
+import Ba1 from '../../Imgs/Ba1.png';
 
 function ProductCard({ name, description, topics, image }) {
   return (
